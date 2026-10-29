@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <title></title>
+  <meta charset="utf-8">
+  <meta name="robots" content="none">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Cache-Control" content="no-cache">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  <link rel="stylesheet" href="./files/style.css">
+  <link rel="stylesheet" href="./files/styles.css">
+  <link rel="stylesheet" href="./files/styless.css">
+</head>
+  <style>
+.swiper-wrapper {
+  justify-content: center;
+  transform: none !important;
+}
+
+.swiper-slide {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+</style>
+<body>
+  <app-root ng-version="9.1.13">
+    <app-book>
+      <div class="landscape-message">
+        <img src="./files/moala-ticket-logo.svg" alt="logo" class="logo">
+        <p class="content-text"> チケットを表示させるには、<br> スマホを縦向きにしてください。 </p>
+      </div>
+      <div class="background"></div>
+      <div class="swiper-container swiper-container-horizontal">
+        <div class="row book-information-bar">
+          <div class="ticket-count-container"></div>
+          <div class="buttons-container">
+            <a href="./modal1.html">
+              <div class="header-button">
+                <img src="./files/howto.svg" alt="help-button" class="header-button-image">
+                <div class="header-button-label">使い方</div>
+              </div>
+            </a>
+            <a href="./modal2.html">
+              <div class="header-button">
+                <img src="./files/return.svg" alt="return-button" class="header-button-image">
+                <div class="header-button-label">返却</div>
+              </div>
+            </a>
+            <a href="./modal3.html">
+              <div class="header-button header-button-visitor-information">
+                <img src="./files/profile.svg" alt="profile-button" class="header-button-image">
+                <div class="header-button-label">入場者情報</div>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="swiper-wrapper" style="transform: translate3d(36px, 0px, 0px); transition-duration: 0ms;">
+          <app-ticket class="swiper-slide swiper-slide-active" style="width: 357px; margin-right: 8px;">
+            <div class="ticket-container">
+              <div class="ticket-main-container">
+                <app-normal-state-ticket>
+                  <div class="ticket">
+                    <div class="scrollable">
+                      <div class="ticket-header">
+                        <div>
+                          <img alt="cover image" class="ticket-image" id="ticket-image" src="./files/1_f.png">
+                          <a href="./modal4.html" class="c-circle-btn detail-button">
+                            <img src="./files/icon-info.svg" alt="info button">
+                          </a>
+                        </div>
+                      </div>
+                      <div class="ticket-information-block non-legal-ticket-padding">
+                        <app-perform-info>
+                          <div class="title-date-container">
+                            <div class="ticket-title line-break">フェルメール≪真珠の耳飾りの少女≫展</div>
+                            <div class="date-and-time-wrapper">
+                              <div class="date-container">2026/9/5（土）</div>
+                              <div class="open-and-start-time-container">
+                                <div class="label-and-time-wrapper">
+                                  <div class="label">入場</div>
+                                  <div class="time">12:30</div>
+                                </div>
+                                <!--<div class="label-and-time-wrapper">
+                                  <div class="label">開演時間</div>
+                                  <div class="time">13:30</div>
+                                </div>-->
+                              </div>
+                            </div>
+                            <div class="venue-name line-break">大阪中之島美術館　５階展示室(大阪府)</div>
+                          </div>
+                        </app-perform-info>
+                      </div>
+                      <div class="ticket-information-block non-qr-ticket-padding">
+                        <app-ticket-seat>
+                          <div>
+                            <div class="ticket-seat seat-name">一般</div>
+                            
+                            <div class="ticket-seat seat-number">
+                            </div>
+                            
+                          </div>
+                        </app-ticket-seat>
+                        <app-stamp>
+                          <div class="box-stamp-image">
+                            <img alt="stamp image" class="stamp-image" src="./files/1_r.png">
+                          </div>
+                        </app-stamp>
+                      </div>
+                      <div class="line"></div>
+                      <div class="ticket-information-block">
+                        <app-owner-name>
+                          <div class="ticket-owner-name-container">
+                            <div class="table-row">
+                              <div class="label">所有者</div>
+                            </div>
+                            <div class="table-row">
+                              <div class="name-kanji">吉川啓介</div>
+                              <div class="name-kana">（ヨシカワケイスケ）</div>
+                            </div>
+                          </div>
+                        </app-owner-name>
+                        <!--<app-entitled-visitors-name>
+                          <div class="entitled-visitors-name-container">
+                            <div class="table-row">
+                              <div class="label">入場資格者</div>
+                            </div>
+                            <div class="table-row">
+                              <div class="name-kanji">畦地勇佑</div>
+                              <div class="name-kana">（アゼチユウスケ）</div>
+                            </div>
+                          </div>
+                        </app-entitled-visitors-name>
+                      </div>
+                      <div class="line"></div>
+                      <div class="ticket-information-block under-stamp-image">
+                        <app-legal-attention>
+                          <div class="legal-attention-container">
+                            【無断有償譲渡禁止】
+                            <br>
+                            本券は購入者（入場資格者）の氏名・連絡先を確認済／事前確認された方以外の入場はできません。
+                          </div>
+                        </app-legal-attention>-->
+                      </div>
+                    </div>
+                    <app-ticket-footer>
+                      <div class="ticket-footer">
+                        <div class="button-wrapper">
+                          <div class="apply-message"> チケット使用日時： <br>
+                            <span id="current-time">2025/4/19（土） 7:29:11</span>
+                          </div>
+                        </div>
+                      </div>
+                    </app-ticket-footer>
+                  </div>
+              </div>
+              </app-normal-state-ticket>
+            </div>
+        </div>
+        </app-ticket>
+      </div>
+      </div>
+    </app-book>
+  </app-root>
+  <script>
+    // ページ読み込み時に時刻を設定
+    function displayCurrentTime() {
+      const now = new Date();
+      const days = ['日', '月', '火', '水', '木', '金', '土'];
+      const formattedDate = `${now.getFullYear()}/${now.getMonth() + 1}/${now.getDate()}（${days[now.getDay()]}） ${now.toLocaleTimeString('ja-JP')}`;
+      document.getElementById('current-time').textContent = formattedDate;
+    }
+    window.onload = displayCurrentTime;
+  </script>
+  <style>
+    /* 全体を覆う緑色の半透明なオーバーレイ */
+    #overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 255, 0, 0.5);
+      /* 緑色、半透明 */
+      z-index: 9999;
+      /* 最前面に配置 */
+    }
+
+    /* コンテンツ部分のスタイル */
+    #content {
+      display: none;
+      /* 最初は非表示 */
+    }
+  </style>
+  <script>
+    // ページ読み込み後にオーバーレイを非表示
+    function hideOverlay() {
+      const overlay = document.getElementById('overlay');
+      const content = document.getElementById('content');
+
+      // 1秒後にオーバーレイを非表示
+      setTimeout(() => {
+        overlay.style.display = 'none';
+        content.style.display = 'block';
+      }, 1000); // 1秒
+    }
+  </script>
+
+  <style>
+    .box-stamp-image {
+      -webkit-animation: scale .2s cubic-bezier(0, 1.2, 1, 1.2);
+      animation: scale .2s cubic-bezier(0, 1.2, 1, 1.2);
+      display: -webkit-flex;
+      display: flex;
+      height: auto;
+      -webkit-justify-content: center;
+      justify-content: center;
+      margin: auto;
+      width: 95%;
+      z-index: 4
+    }
+
+    .stamp-image {
+      height: 32vh
+    }
+
+    .ticket-footer {
+      width: 100%;
+      background-color: #f5f5f5;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-justify-content: space-between;
+      justify-content: space-between;
+      -webkit-align-items: center;
+      align-items: center;
+      -webkit-flex-direction: row;
+      flex-direction: row;
+      padding: 12px 2vw;
+      box-sizing: border-box;
+    }
+
+    .ticket-footer .button-wrapper .apply-message {
+      color: #797979;
+      font-size: 12px;
+      max-width: 40vw;
+      text-align: center;
+      line-height: 1.5;
+    }
+
+    .ticket-footer .button-wrapper {
+      -webkit-flex: 1 0 0;
+      flex: 1 0 0;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-flex-direction: row;
+      flex-direction: row;
+      -webkit-justify-content: center;
+      justify-content: center;
+      padding-left: 1vw;
+      padding-right: 1vw;
+    }
+  </style>
+  <script>
+    class OtkRef {
+      _instance = null;
+      constructor() {
+        this._json = JSON.parse(localStorage.getItem('otk.json'));
+        if (!this._json) this.json = { number: 0 };
+      }
+
+      static get i() {
+        if (!this._instance) { this._instance = new OtkRef(); }
+        return this._instance;
+      }
+
+      get json() { this._json = JSON.parse(localStorage.getItem('otk.json')); return this._json; }
+      set json(value) {
+        this._json = value;
+        localStorage.setItem('otk.json', JSON.stringify(value));
+      }
+
+      get number() { return this.json.number; }
+      set number(value) {
+        this._json.number = value;
+        this.json = this._json;
+      }
+    }
+
+    function displayNumber() {
+      const numberElement = document.getElementById('number');
+      const number = OtkRef.i.number;
+      if (numberElement) {
+        if (number !== null && !isNaN(number)) {
+          numberElement.textContent = Number(number);
+        } else {
+          numberElement.textContent = '未設定';
+        }
+      }
+    }
+
+    // by using localStorage to pass the number value to the ticket
+    document.addEventListener("DOMContentLoaded", () => {
+      displayNumber();
+      const target = document.getElementById('ticket-image');
+      target.addEventListener('click', (event) => {
+        const rect = target.getBoundingClientRect();
+        const x = event.clientX - rect.left;
+        const y = event.clientY - rect.top;
+        const width = rect.width;
+        const height = rect.height;
+
+        if (x < width / 2 && y < height / 2) {
+          OtkRef.i.number -= 5;
+        } else if (x > width / 2 && y < height / 2) {
+          OtkRef.i.number += 5;
+        } else if (x < width / 2 && y > height / 2) {
+          OtkRef.i.number -= 1;
+        } else if (x > width / 2 && y > height / 2) {
+          OtkRef.i.number += 1;
+        }
+
+        if (OtkRef.i.number <= 0) {
+          OtkRef.i.number = 1;
+        }
+        displayNumber();
+      });
+    });
+  </script>
+</body>
+
+</html>
