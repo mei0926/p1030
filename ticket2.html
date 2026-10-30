@@ -29,16 +29,23 @@
 .date-and-time-wrapper {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-}
-
-.date-container {
+  align-items: flex-start !important;
+  justify-content: flex-start !important;
+  text-align: left !important;
   width: 100%;
 }
 
-.open-and-start-time-container {
+.date-and-time-wrapper .date-container {
+  width: 100%;
+  text-align: left !important;
+}
+
+.date-and-time-wrapper .open-and-start-time-container {
   display: flex;
   flex-direction: row;
+  justify-content: flex-start !important;
+  align-items: center;
+  width: 100%;
   gap: 12px;
 }
 </style>
@@ -115,7 +122,7 @@
                           <div>
                             <div class="ticket-seat seat-name">ＶＩＰチケット（１ＤＡＹ）</div>
                             
-                            <div class="ticket-seat seat-number">
+                            <div class="ticket-seat seat-number">整理番号 PAVIP 整理番号14番
                             </div>
                             
                           </div>
